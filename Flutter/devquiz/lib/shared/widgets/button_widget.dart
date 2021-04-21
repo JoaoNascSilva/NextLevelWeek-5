@@ -19,26 +19,24 @@ class ButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        height: 48,
-        width: 164,
-        decoration: BoxDecoration(
-          color: _isSetBackgroundColor ? this.backgroundColor : AppColors.white,
-          border: Border.fromBorderSide(
-            BorderSide(
-              color: AppColors.border,
-            ),
+    return Container(
+      height: 48,
+      width: 164,
+      decoration: BoxDecoration(
+        color: _isSetBackgroundColor ? this.backgroundColor : AppColors.white,
+        border: Border.fromBorderSide(
+          BorderSide(
+            color: AppColors.border,
           ),
-          borderRadius: BorderRadius.circular(10),
         ),
-        child: Center(
-          child: Text(
-            this.title,
-            style: GoogleFonts.notoSans(
-              color: _isSetBackgroundColor ? Colors.white : AppColors.lightGrey,
-              fontSize: 20,
-            ),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Center(
+        child: Text(
+          this.title,
+          style: GoogleFonts.notoSans(
+            color: _isSetBackgroundColor ? Colors.white : AppColors.lightGrey,
+            fontSize: 20,
           ),
         ),
       ),
