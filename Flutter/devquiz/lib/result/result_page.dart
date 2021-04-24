@@ -4,10 +4,10 @@ import 'package:devquiz/core/app_text_styles.dart';
 import 'package:devquiz/shared/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 
-class ResponsePage extends StatelessWidget {
+class ResultPage extends StatelessWidget {
   final bool isSuccess;
 
-  const ResponsePage({
+  const ResultPage({
     Key? key,
     required this.isSuccess,
   }) : super(key: key);

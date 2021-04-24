@@ -4,6 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class QuestionIndicatorWidget extends StatelessWidget {
+  final int curretPage;
+  final int lenght;
+
+  const QuestionIndicatorWidget({
+    Key? key,
+    required this.curretPage,
+    required this.lenght,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,14 +24,14 @@ class QuestionIndicatorWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Questão 04',
+                "Questão $curretPage",
                 style: GoogleFonts.notoSans(
                   fontSize: 16,
                   color: AppColors.lightGrey,
                 ),
               ),
               Text(
-                'de 10',
+                "de $lenght",
                 style: GoogleFonts.notoSans(
                   fontSize: 16,
                   color: AppColors.lightGrey,
@@ -31,7 +40,7 @@ class QuestionIndicatorWidget extends StatelessWidget {
             ],
           ),
           SizedBox(height: 16),
-          ProgressIndicatorWidget(value: 0.40),
+          ProgressIndicatorWidget(value: curretPage / lenght),
         ],
       ),
     );
